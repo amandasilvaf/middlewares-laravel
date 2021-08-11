@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('primeiro');
+    }
+
     // OBS: simulação de uma view apenas para demonstrar o uso do middleware,
     //obviamente o index retornaria a view('usuarios'). 
     public function index(){
