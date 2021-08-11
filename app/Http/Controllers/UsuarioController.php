@@ -8,7 +8,7 @@ class UsuarioController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('primeiro');
+       // $this->middleware('primeiro');
     }
 
     // OBS: simulação de uma view apenas para demonstrar o uso do middleware,
