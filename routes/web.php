@@ -24,3 +24,6 @@ Route::get('/', function () {
 Route::get('/usuarios', [UsuarioController::class, 'index'])
         ->middleware('primeiro','segundo');
 
+Route::get('/terceiro', function(){
+    return('Teste TerceiroMiddleware com passagem de parâmetro.');
+})->middleware('terceiro:joao');
