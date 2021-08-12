@@ -19,11 +19,13 @@ class PrimeiroMiddleware
     public function handle(Request $request, Closure $next)
     {
         
-        Log::debug('Passou pelo PrimeiroMiddleware!');
+        Log::debug('Passou pelo PrimeiroMiddleware! ANTES');
         // Se eu quisesse interceptar a requisição antes de chegar ao controller,
         // seria aqui que eu faria alguma operação com ela!
-       
-        //return $next($request); 
-        return response('Parando a cadeia de chamadas!');
+        //return response('Parando a cadeia de chamadas!');
+        $response = $next($request); 
+        Log::debug('Passou pelo PrimeiroMiddleware! DEPOIS');
+        //return $response;
+        return response('Alterei o que veio do UsuarioController@index!');
     }
 }
