@@ -15,10 +15,10 @@ class TerceiroMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next, $nome)
+    public function handle(Request $request, Closure $next, $nome, $idade)
     {
 
-        Log::debug("Passou pelo TerceiroMiddleware![nome = $nome]");
+        Log::debug("Passou pelo TerceiroMiddleware![nome = $nome, idade = $idade]");
         return $next($request);
     }
 }
