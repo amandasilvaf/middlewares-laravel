@@ -22,3 +22,4 @@ Route::get('/', function () {
 
 
 Route::get('/usuarios', [UsuarioController::class, 'index']);
+
