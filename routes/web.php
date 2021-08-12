@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
-//use App\Http\Middleware\PrimeiroMiddleware;
-
+use App\Http\Middleware\PrimeiroMiddleware;
+use App\Http\Middleware\SegundoMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +21,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/usuarios', [UsuarioController::class, 'index']);
+Route::get('/usuarios', [UsuarioController::class, 'index'])
+        ->middleware('primeiro','segundo');
 

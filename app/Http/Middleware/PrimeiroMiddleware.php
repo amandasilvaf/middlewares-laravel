@@ -22,6 +22,8 @@ class PrimeiroMiddleware
         Log::debug('Passou pelo PrimeiroMiddleware!');
         // Se eu quisesse interceptar a requisição antes de chegar ao controller,
         // seria aqui que eu faria alguma operação com ela!
-        return $next($request);
+       
+        //return $next($request); 
+        return response('Parando a cadeia de chamadas!');
     }
 }
