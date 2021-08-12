@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         'primeiro' => \App\Http\Middleware\PrimeiroMiddleware::class,
         'segundo' => \App\Http\Middleware\SegundoMiddleware::class,
         'terceiro' => \App\Http\Middleware\TerceiroMiddleware::class,
+        'produtoAdmin' => \App\Http\Middleware\ProdutoMiddleware::class,
     ];
 }
